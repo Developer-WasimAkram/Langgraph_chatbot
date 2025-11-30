@@ -24,16 +24,20 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 
 
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
-os.environ["HUGGINGFACE_API_KEY"] = os.getenv("HUGGINGFACE_API_KEY")
+#os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
+#os.environ["HUGGINGFACE_API_KEY"] = os.getenv("HUGGINGFACE_API_KEY")
+GOOGLE_API_KEY = "AIzaSyD54NdZw1ps1mlV1UlC8ffXjDJy86qVAnY"
+HUGGINGFACE_API_KEY = "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"
+#llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=GOOGLE_API_KEY)
 
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
+
 # -------------------
 # 1. LLM + embeddings
 # -------------------
 #llm = ChatOpenAI(model="gpt-4o-mini")
 #embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2",api_key=HUGGINGFACE_API_KEY)
 
 # -------------------
 # 2. PDF retriever store (per thread)
