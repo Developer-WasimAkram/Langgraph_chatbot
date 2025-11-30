@@ -29,7 +29,7 @@ load_dotenv()
 GOOGLE_API_KEY="AIzaSyDfxEROS5Oksk-9YBUIrE6w_ZzAuFwc73M"
 HUGGINGFACE_API_KEY = "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"
 #llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=GOOGLE_API_KEY)
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=os.getenv("GOOGLE_API_KEY"))
 
 
 # -------------------
