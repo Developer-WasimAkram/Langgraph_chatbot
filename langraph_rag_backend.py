@@ -37,7 +37,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=GOOGLE_API_KEY)
 # -------------------
 #llm = ChatOpenAI(model="gpt-4o-mini")
 #embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2",api_key=HUGGINGFACE_API_KEY)
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 # -------------------
 # 2. PDF retriever store (per thread)
